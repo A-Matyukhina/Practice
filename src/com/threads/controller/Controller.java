@@ -14,7 +14,7 @@ import java.util.concurrent.*;
  * Занимается проверкой корректности запроса, данных и т.п.
  */
 public class Controller {
-    private ListOperation listOperation = new ListOperation();
+    private final ListOperation listOperation = new ListOperation();
 
     public void addOperation(ArrayList<Double> numbers, OperationType operationType) {
         if (numbers.isEmpty() || operationType == null) return;

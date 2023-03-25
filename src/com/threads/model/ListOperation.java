@@ -3,7 +3,7 @@ package com.threads.model;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class ListOperation {
-    private LinkedBlockingQueue<Operation> operations = new LinkedBlockingQueue<>();
+    private final LinkedBlockingQueue<Operation> operations = new LinkedBlockingQueue<>();
 
     /**
      * Метод сохранения операции с числами

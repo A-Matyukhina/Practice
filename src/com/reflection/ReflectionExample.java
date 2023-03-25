@@ -15,9 +15,5 @@ public class ReflectionExample {
         Method m = clazz.getMethod("toUpperCase");
         Object result = m.invoke(s);
         System.out.println(result);
-//        System.out.println("_________________________");
-//        Constructor ctor = clazz.getConstructor(String.class);
-//        String s = (String) ctor.newInstance("Hello");
-//        System.out.println(s);
     }
 }

@@ -19,7 +19,7 @@ public class Main {
         carL.add(car4);
         carL.add(car5);
         carL.add(car6);
-        carL.add(car7);
+        carL.add(car7);//List.of() can be used to add all this car objects at once
         CarList carList = new CarList(carL);
         System.out.println(carList.sortByPrice().toString());
         System.out.println("____________________");

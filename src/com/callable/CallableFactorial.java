@@ -21,7 +21,7 @@ public class CallableFactorial {
     }
 }
 class Factorial2 implements Callable<Integer>{
-    int f;
+    int f;//naming
 
     public Factorial2(int f) {
         this.f = f;

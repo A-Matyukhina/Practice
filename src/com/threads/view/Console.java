@@ -70,7 +70,7 @@ public class Console {
      * Метод, определяющий тип операции
      */
     public static OperationType getTypeOperation(int numberOperation) {
-        if (numberOperation == 1) return OperationType.SUM;
+        if (numberOperation == 1) return OperationType.SUM;//switch case would be better
         if (numberOperation == 2) return OperationType.DIFF;
         if (numberOperation == 3) return OperationType.MUL;
         if (numberOperation == 4) return OperationType.DIV;
