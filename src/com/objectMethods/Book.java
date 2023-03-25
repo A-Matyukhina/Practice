@@ -33,7 +33,7 @@ public class Book implements Cloneable {
     public int hashCode() {
         return 31 * (title != null? title.hashCode(): 0) + (author != null? author.hashCode(): 0);
     }
-
+//commented code better be removed
 //    @Override
 //    public boolean equals(Object obj) {
 //        if (obj == this) {

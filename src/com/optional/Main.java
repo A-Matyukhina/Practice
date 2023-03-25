@@ -10,7 +10,7 @@ public class Main {
         Person p5 = new Person("Anton", 9);
 
         PersonService personService = new PersonService();
-        personService.getPersonList().add(p1);
+        personService.getPersonList().add(p1);//access through field to object is illegal, must be done through method
         personService.getPersonList().add(p2);
         personService.getPersonList().add(p3);
         personService.getPersonList().add(p4);

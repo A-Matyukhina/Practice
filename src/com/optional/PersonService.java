@@ -40,33 +40,7 @@ public class PersonService {
     public Optional<Person> getPerson2(String name){
         return personList.stream().filter(e -> e.getName().equals(name)).findAny();
     }
-//    public Optional<Person> getPerson(String name) {
-//        Optional<Person> result = personList.stream().filter(e -> e.getName().equals(name)).findAny();
-//        if(result.isPresent()){
-//            return result;
-//        } else {
-//            return Optional.empty();
-//        }
-//    }
-//    или
-//    public Optional<Person> getPerson(String name) {
-//        return personList.stream().filter(e -> e.getName().equals(name))
-//        .findAny().filter(Optional::isPresent).orElse(Optional.empty());
-//    }
 
-//    public int getAge(String name) {
-//        Optional<Person> person = getPerson(name);
-//        return person.map(Person::getAge).orElse(-1);
-//    }
-//public int getAge(String name) {
-//    Optional<Person> person = getPerson(name);
-//    if (person.isPresent()) {
-//        return person.get().getAge();
-//    } else {
-//        // обработка отсутствия человека с таким именем
-//        return -1;
-//    }
-//}
     public int getAge(String name){
         Optional<Person> person = getPerson2(name);
         return person.map(Person::getAge).orElse(-1);
