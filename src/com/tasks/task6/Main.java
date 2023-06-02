@@ -1,10 +1,9 @@
 package com.tasks.task6;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -40,5 +39,11 @@ public class Main {
         mapOfList.put(worker4, finalList4);
         Worker result = mapOfList.entrySet().stream().max(Comparator.comparingInt(e -> e.getValue().size())).get().getKey();
         System.out.println(result);
+
+        ArrayList<Task> taskList = new ArrayList<>(result.getTasks());
+        System.out.println(taskList);
+        Optional<Task> taskForDelete = taskList.stream().filter((e -> e.getDifficult() > 2)).findFirst();
+        taskList.remove(taskForDelete.get());
+        System.out.println(taskList);
     }
 }
